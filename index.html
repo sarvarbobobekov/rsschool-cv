@@ -1,1 +1,167 @@
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+    />
+    <title>CV Sarvar Bobobekov</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="btn" class="burger-btn"><span></span></div>
+      <nav class="container">
+        <ul id="menu" class="menu">
+          <li class="menu-item"><a href="#Summary">Summary</a></li>
+          <li class="menu-item"><a href="#Skills">Technical Skills</a></li>
+          <li class="menu-item"><a href="#Code">Code Sample</a></li>
+          <li class="menu-item">
+            <a href="#Experience">Professional Experience</a>
+          </li>
+          <li class="menu-item"><a href="#Project">Project</a></li>
+        </ul>
+      </nav>
+      <header class="container">
+        <div class="title">
+          <h1>Sarvar Bobobekov</h1>
+          <h2 class="subtitle">Intern Developer</h2>
+        </div>
+      </header>
+      <main>
+        <aside>
+          <article class="aside-article">
+            <h3>Contacts</h3>
+            <hr />
+            <ul class="fa-ul">
+              <li><i class="fa-li fa fa-map-marker"></i>Fergana, Uzbekistan</li>
+              <li>
+                <i class="fa-li fa fa-envelope"></i>sarvarbobobekov@mail.ru
+              </li>
+              <li>
+                <i class="fa-li fa fa-github"></i
+                ><a href="https://github.com/sarvarbobobekov">sarvarbobekov</a>
+              </li>
+            </ul>
+          </article>
+          <article class="aside-article">
+            <h3>English Level</h3>
+            <hr />
+            <p><strong>B1</strong></p>
+          </article>
+        </aside>
+        <section>
+          <article class="section-article">
+            <h3 id="Summary">Summary</h3>
+            <hr />
+            <p>Novice frontend-developer with few experience.</p>
+          </article>
+          <article class="section-article">
+            <h3 id="Skills">Technical Skills</h3>
+            <hr />
+            <ul>
+              <li>HTML, CSS, JavaScript</li>
+              <li>
+                Tools: Git, VS Code, Adobe Photoshop, Adobe Lightroom, Adobe
+                Illustrator, SPSS Statistics
+              </li>
+            </ul>
+          </article>
+          <article class="section-article">
+            <h3 id="Code">Code Sample</h3>
+            <hr />
+            <div>
+              <pre>
+<code>
+function rgb(r, g, b){
+    function convert(num) {
+    if (num &lt;= 0) { return '00'; }
+    else if (num &gt; 255) {
+        return (255).toString(16);
+    } else {
+        let hexaNum = (num).toString(16);
+        if (hexaNum.length &lt; 2) {
+            let binaryHexaNum = '0' + hexaNum;
+        return binaryHexaNum;
+        }
+        else { return hexaNum; }
+    }
+    }
+    const Hex = convert(r) + convert(g) +
+        convert(b);
+    return Hex.toUpperCase();
+}
+                                </code>
+                            </pre>
+            </div>
+          </article>
+          <article class="section-article">
+            <h3 id="Experience">Education and Professional Experience</h3>
+            <hr />
+            <ul>
+              <li>
+                <h3>Information Tech.</h3>
+                <ul>
+                  <li>Rolling scopes school</li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+          <article class="section-article">
+            <h3 id="Project">Project</h3>
+            <hr />
+            <div class="project">
+              <a
+                href="https://sarvarbobobekov.github.io/rsschool-cv/cv"
+                target="_blank"
+              >
+                <img class="project-img" src="./images/cv.png" alt="Museum" />
+              </a>
+            </div>
+          </article>
+        </section>
+      </main>
+      <footer>
+        <div class="author">
+          <a href="https://github.com/sarvarbobobekov" target="_blank"
+            ><h3>Sarvar Bobobekov</h3></a
+          >
+          <span class="year">, 2022.</span>
+          <a href="https://rs.school/js/" target="_blank">
+            <img
+              class="rs-school-img"
+              src="./images/rs_school_js.svg"
+              alt="RS School"
+            />
+          </a>
+        </div>
+      </footer>
+    </div>
+    <script>
+      const btn = document.querySelector(".burger-btn");
+      const menu = document.querySelector(".menu");
+      const menuItem = document.querySelectorAll(".menu-item");
+      function toggleMenu() {
+        btn.classList.toggle("open");
+        menu.classList.toggle("menu-open");
+      }
+      function closeMenu() {
+        btn.classList.remove("open");
+        menu.classList.remove("menu-open");
+      }
+      btn.addEventListener("click", toggleMenu);
+      menuItem.forEach((el) => el.addEventListener("click", closeMenu));
+    </script>
+  </body>
+</html>
